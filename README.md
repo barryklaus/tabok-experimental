@@ -1,0 +1,44 @@
+# TABOK — Experimental WebGL Edition
+
+Version: **v0.19.5 Experimental WebGL — High-Fidelity Board**  
+Build: **2026.08.25.W6**
+
+Open `index.html` through a web host such as GitHub Pages, or serve this folder
+locally. The game remains browser-only and needs no installation.
+
+## What changed
+
+- Detailed stone hexes, ruin walls, carved motifs, bevel lighting, and the
+  Portal dais are composed once at 1802×1972 and cached as one GPU texture.
+- The haunting Portal uses a sealed-eye design, opposing arc currents, orbiting
+  sigils, and eight tiny motes without blur filters or particle storms.
+- Exact SVG hex hit areas remain above the canvas, preserving adjacent-step and
+  maximum-route selection behavior.
+- Hovering a board portrait reveals its Traveler name and entrance number.
+- Last Breath and Answer-or-Die now issue prominent, accessible alerts naming
+  the exact Traveler—or every simultaneously affected Traveler—who must act.
+- Grand Plunder now steals a strict maximum of three total treasures from one
+  Traveler. Human players select each treasure; CPU players choose a legal
+  three-treasure haul strategically. The 3-3-3 inventory limit still applies.
+- Human movement now exposes every reachable legal destination: adjacent,
+  intermediate, and maximum-distance hexes. An intermediate shortcut follows
+  its visible route and preserves the unused movement for another choice.
+- Every traversed movement hex now resolves collectibles immediately. Human
+  and CPU Travelers can pick up Shields, Armor, and Rune Dice while passing
+  through them; Riftwalk also collects an item on its destination hex.
+- Unsupported WebGL browsers automatically fall back to the original SVG board.
+- Internal canvas resolution adapts from 58% to 100%, depending on the selected
+  quality tier and device capability; the board source remains full resolution.
+- Hidden SVG art is removed from the browser's animation workload.
+- Celebration, death, Major Monster, and character animation assets load only
+  when their scenes need them.
+- Obsolete duplicate sprite assets were excluded from this edition.
+
+All other Experimental Rune Die, Portal, Monster, Major Monster, Last Breath,
+Answer-or-Die, CPU, and treasure-transfer rules remain unchanged.
+
+## Performance controls
+
+- **Fast + Auto** is recommended for online and mobile play.
+- **Cinematic + Full** favors richer effects on stronger desktop hardware.
+- Add `?debug` to the page URL to display the live FPS meter.
